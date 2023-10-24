@@ -115,6 +115,7 @@ function App() {
         <Section/>
         <Products/>
         <Posts/>
+        {/* <Products/> */}
         <Footer/>
     </div>
     </div>
