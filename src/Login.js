@@ -1,124 +1,72 @@
 import React from "react";
-
+import "./Login.css";
+// import apple from "../src/assets/apple.svg";
+// import google from "../src/assets/google-icon.svg";
 const Login = () => {
-    
   return (
-    <div className="si">
-      <div className="notification">
-      <div className="notification-heading">
-        <span className="notification-content">Notifications</span>
-      </div>
+    <>
+      <div className="SignIn1">
+        <div className="RightSide"></div>
+        <div className="LeftSide"></div>
+        <div className="Board">Board</div>
+        <div className="LoginForm">
+          <div className="SignIn2">
+            <span className="span-1">Sign In</span>
+            <span className="span-2">Sign in to your account</span>
+          </div>
 
-      <div className="notification-section">
-        <div className="man-logo">
-         
-        </div>
-        <div className="message-section">
-          <div className="message-section-content">
-            <p>
-              <span className="section-content">New Assignment available</span>
-              <span className="subject-name">
-                “ INT407 ” : “Chapter 1 & Chapter 2”
-              </span>
-            </p>
+          <div className="google">
+            <button>
+              {/* <img src={google} alt="Google Logo" /> */}
+              <span>Sign in with Google</span>
+            </button>
+            <button>
+              {/* <img src={apple} alt="Apple Logo" /> */}
+              <span>Sign in with Apple</span>
+            </button>
           </div>
-          <div className="message-section-content-2">
-            <span className="section-content-2">a few moments ago</span>
-            <span className="section-btn">New</span>
-          </div>
-        </div>
-      </div>
 
-      <div className="notification-section">
-        <div className="man-logo">
-          {/* <img src={olivia} alt="none" /> */}
-        </div>
-        <div className="message-section">
-          <div className="message-section-content">
-            <p>
-              <span className="section-content">New Learning Material available in</span>
-              <span className="subject-name"> “INT207” by Olivia Rhye</span>
-            </p>
-          </div>
-          <div className="message-section-content-2">
-            <span className="section-content-2">45 minutes ago</span>
-            <span className="section-btn-material">Material</span>
-          </div>
-        </div>
-      </div>
+          <div className="card-1">
+            <div className="email">
+              <span>Email Address</span>
+            </div>
+            <div className="input-margin">
+              <input
+                type="email"
+                className="input-email"
+                id="emailInput"
+                placeholder="Enter your email"
+              />
+            </div>
 
-      <div className="notification-section">
-        <div className="man-logo">
-          {/* <img src={man} alt="none" /> */}
-        </div>
-        <div className="message-section">
-          <div className="message-section-content">
-            <p>
-              <span className="section-content">
-                Exam Available "CAP820":Middle Term :12:00 - 14:00
-              </span>
-              <span className="subject-name"> | 11 APR,2023</span>
-            </p>
-          </div>
-          <div className="message-section-content-2">
-            <span className="section-content-2">12 hours ago</span>
-            <span className="section-btn">Exam </span>
-          </div>
-        </div>
-      </div>
+            <div className="email">
+              <span>Password</span>
+            </div>
+            <div className="input-margin">
+              <input
+                type="password"
+                className="input-email"
+                id="passwordInput"
+                placeholder="Enter your password"
+              />
+            </div>
 
-      <div className="notification-section">
-        <div className="man-logo">
-          {/* <img src={olivia} alt="none" /> */}
-        </div>
-        <div className="message-section">
-          <div className="message-section-content">
-            <p>
-              <span className="section-content">
-                System Maintenance : LMS will undergo maintenance:  
-               
-              </span>
-              <span className="subject-name">
-              Estimated Down time : 3 hours
-              </span>
-            </p>
-          </div>
-          <div className="message-section-content-2">
-            <span className="section-content-2">1 day ago</span>
-            <span className="section-btn-maintenance">Maintenance</span>
-          </div>
-        </div>
-      </div>
+            <div className="email">
+              <span className="forget">Forget Password?</span>
+            </div>
 
-      <div className="notification-section">
-        <div className="man-logo">
-          {/* <img src={man} alt="none" /> */}
-        </div>
-        <div className="message-section">
-          <div className="message-section-content">
-            <p>
-              <span className="section-content">
-                Olivia Rhye updated grades :
-              </span>
-              <span className="subject-name">
-                Check Grades for detailed view of grades.
-              </span>
-            </p>
+            <div className="email">
+              <button>Sign In</button>
+            </div>
           </div>
-          <div className="message-section-content-2">
-            <span className="section-content-2">3 days ago</span>
-            <span className="section-btn-grades">Grades</span>
+
+          <div className="dont">
+            <span>Don’t have an account? </span>
+            <span className="span-dont">Register here</span>
           </div>
         </div>
       </div>
-      <div className="view-all">
-        <div>
-          {/* <img src={eye} alt="eye" /> */}
-        </div>
-        <div className="view-all-btn">View All</div>
-      </div>
-    </div>
-    </div>
+    </>
   );
 };
 

@@ -9,6 +9,8 @@ import Navbar from './Navbar';
 import Products from './Products';
 import Posts from './Posts';
 import Footer from './Footer';
+import Login from './Login';
+import Events from './Events';
 
 function App() {
   useEffect(() => {
@@ -43,9 +45,6 @@ function App() {
     ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
     ScrollTrigger.refresh();
 
-  
-
-  
     // Video container animation
     var videocon = document.querySelector("#video-container");
     var playbtn = document.querySelector("#play");
@@ -115,10 +114,11 @@ function App() {
         <Section/>
         <Products/>
         <Posts/>
-        {/* <Products/> */}
         <Footer/>
+        
     </div>
     </div>
+   
    
   );
 }

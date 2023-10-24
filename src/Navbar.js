@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Login from "./Login";
+import Notification from "./Notification";
 const Navbar = () => {
   
   const [showModal , setShowModal]=useState(false);
@@ -12,7 +12,7 @@ const Navbar = () => {
     };
   return (
     <div>
-        {showModal && <Login setShowModal={setShowModal}/>}
+        {showModal && <Notification setShowModal={setShowModal}/>}
       <div id="nav">
         <div id="nav-part1">
           <h1>Scout Verse Co.</h1>
