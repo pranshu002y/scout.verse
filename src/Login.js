@@ -1,8 +1,38 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./Login.css";
+import { useToast } from '@chakra-ui/react';
+import { useNavigate, Link } from 'react-router-dom';
+import axios from "axios";
 // import apple from "../src/assets/apple.svg";
 // import google from "../src/assets/google-icon.svg";
 const Login = () => {
+  const [data,setData]=useState({
+    email:"",
+    password:""
+  });
+  const toast = useToast();
+  const toastIdRef=useRef();
+  const navigate = useNavigate()
+  const handleSignIn = async()=>{
+    try{
+      const res = await axios.post('http://localhost:5500/auth/login',
+      data,{
+        headers:{"content-type":"application/json"}
+      })
+      console.log(res)
+      if(res.data.error)toastIdRef.current = toast({description:res.data.error,status:'error'})
+      else{
+        toastIdRef.current = toast({description:"Logged In",status:'success!'})
+        navigate('/')
+        if(res.data.token)
+        localStorage.setItem("token",res.data.token)
+      }
+    }
+    catch (err) {
+      toastIdRef.current = toast({ description: err.message, status: 'error' })
+    }
+  }
+
   return (
     <>
       <div className="SignIn1">
@@ -36,6 +66,7 @@ const Login = () => {
                 className="input-email"
                 id="emailInput"
                 placeholder="Enter your email"
+                value={data.email} onChange={(e)=> setData({...data,email:e.target.value})}
               />
             </div>
 
@@ -47,7 +78,7 @@ const Login = () => {
                 type="password"
                 className="input-email"
                 id="passwordInput"
-                placeholder="Enter your password"
+                placeholder="Enter your password" value={data.password} onChange={(e)=> setData({...data,password:e.target.value})}
               />
             </div>
 
@@ -56,13 +87,13 @@ const Login = () => {
             </div>
 
             <div className="email">
-              <button>Sign In</button>
+              <button onClick={handleSignIn}>Sign In</button>
             </div>
           </div>
 
           <div className="dont">
             <span>Don’t have an account? </span>
-            <span className="span-dont">Register here</span>
+            <span className="span-dont"><Link to="/signup">Register here Up</Link></span>
           </div>
         </div>
       </div>

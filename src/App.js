@@ -1,16 +1,21 @@
-
 import './App.css';
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import LocomotiveScroll from 'locomotive-scroll';
-import Section from './Section';
-import Navbar from './Navbar';
-import Products from './Products';
-import Posts from './Posts';
-import Footer from './Footer';
-import Login from './Login';
+
 import Events from './Events';
+import Games from "../src/Pages/Games"
+import Donate from "../src/Pages/Donate"
+import Shop from "../src/Pages/Shop"
+import { ChakraProvider, theme } from '@chakra-ui/react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import the necessary components and specify the type of router you want to use
+import SignUp from './Pages/SignUp';
+import Home from './Pages/Home';
+// import SignIn from './Pages/SignIn';
+import UpdateProfile from './Pages/UpdateProfile';
+import Login from './Login';
+import Signup from './SignUp';
 
 function App() {
   useEffect(() => {
@@ -107,20 +112,31 @@ function App() {
   }, []);
 
   return (
-    <div className='structure'>
-      <Navbar/>
-    <div id="cursor"></div>
-    <div id="main">
-        <Section/>
-        <Products/>
-        <Posts/>
-        <Footer/>
-        
-    </div>
-    </div>
-   
+
+   <ChakraProvider theme={theme}>
+      <Router> 
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/signup' element={<Signup />} />
+          <Route path='/signin' element={<Login />} />
+          <Route path='/updateprofile' element={<UpdateProfile />} />
+          <Route path='/events' element={<Events/>}/>
+          <Route path='/shop' element={<Shop/>}/>
+          <Route path='/games' element={<Games/>}/>
+          <Route path='/donate' element={<Donate/>}/>
+          <Route path='home' element={<Home/>}/>
+
+        </Routes>
+      </Router>
+    </ChakraProvider>
+
    
   );
 }
 
 export default App;
+
+
+
+
+    

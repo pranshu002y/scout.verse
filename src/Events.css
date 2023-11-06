@@ -23,7 +23,7 @@
 	 max-width: 100%;
 }
  button, select, input, textarea {
-	 font: inherit;
+	 font: inherit !important;
 }
  a {
 	 color: inherit;
@@ -33,8 +33,8 @@
 	 min-height: 80vh;
 	 width: 100%;
 	 max-width: 1600px;
-	 background-color: white;
-	 color: black;
+	 background-color: var( --c-gray-900);
+	 color: white;
 	 padding: 2vw 4vw 6vw;
 	 display: flex;
 	 flex-direction: column;
@@ -167,7 +167,7 @@
 }
  .navigation a:hover, .navigation a:focus {
 	 transform: translateX(4px);
-	 color: var(--c-text-primary);
+	 /* color: var(--c-text-primary); */
 }
  .tabs {
 	 display: flex;
@@ -197,7 +197,7 @@
 	 transition: 0.25s ease;
 }
  .user-profile:hover, .user-profile:focus {
-	 color: var(--c-text-primary);
+	 /* color: var(--c-text-primary); */
 }
  .user-profile:hover span:last-child, .user-profile:focus span:last-child {
 	 box-shadow: 0 0 0 4px var(--c-gray-800), 0 0 0 5px var(--c-text-tertiary);

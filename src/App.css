@@ -39,6 +39,7 @@
 #nav-part1 {
   height: 80px;
   overflow: hidden;
+  font-size: 30px !important;
 }
 
 #nav-part2 #links a {
@@ -147,10 +148,16 @@
 #page2 .elem .dets {
   height: 60px;
   border-radius: 50px;
-  width: 70%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   z-index: 9;
   background-color: rgb(229, 156, 186);
+}
+.dets span{
+  color: white;
 }
 
 #page3 {

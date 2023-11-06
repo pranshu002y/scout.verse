@@ -1,8 +1,7 @@
 import React from "react";
-
 import { useNavigate } from "react-router-dom";
-import "./Events.css";
-const Events=()=>{
+import "../Events.css";
+const Games=()=>{
 	const navigate= useNavigate();
     return(
         <div>
@@ -14,7 +13,7 @@ const Events=()=>{
 					<img src="https://pbs.twimg.com/profile_images/1499265096006000640/ZhEnSTch_400x400.jpg" />
 				</span>
 				<h1 className="logo-title">
-					<span>BGMI</span>
+					<span>GAMES</span>
 				</h1>
 			</div>
 		</div>
@@ -309,4 +308,4 @@ const Events=()=>{
         </div>
     )
 }
-export default Events;
+export default Games;
