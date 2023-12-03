@@ -12,7 +12,7 @@ const Notification = () => {
 const [data,setData]=useState();
 const getUserDetails = async ()=>{
   try{
-    const res= await axios.get('http://localhost:5500/auth/me', {
+    const res= await axios.get('https://scoutverse.onrender.com/auth/me', {
       headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -141,7 +141,7 @@ useEffect(() => {
         <div>
           {/* <img src={eye} alt="eye" /> */}
         </div>
-        <div className="view-all-btn" onClick={handleLogout}>View All</div>
+        <div className="view-all-btn" onClick={handleLogout}>LOG OUT</div>
       </div>
     </div>
     </div>

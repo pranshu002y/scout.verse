@@ -10,12 +10,13 @@ import Donate from "../src/Pages/Donate"
 import Shop from "../src/Pages/Shop"
 import { ChakraProvider, theme } from '@chakra-ui/react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import the necessary components and specify the type of router you want to use
-import SignUp from './Pages/SignUp';
+
 import Home from './Pages/Home';
 // import SignIn from './Pages/SignIn';
-import UpdateProfile from './Pages/UpdateProfile';
+// import UpdateProfile from './Pages/UpdateProfile';
 import Login from './Login';
 import Signup from './SignUp';
+import Popup from './Pages/Popup';
 
 function App() {
   useEffect(() => {
@@ -119,13 +120,13 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/signin' element={<Login />} />
-          <Route path='/updateprofile' element={<UpdateProfile />} />
+          {/* <Route path='/updateprofile' element={<UpdateProfile />} /> */}
           <Route path='/events' element={<Events/>}/>
           <Route path='/shop' element={<Shop/>}/>
           <Route path='/games' element={<Games/>}/>
           <Route path='/donate' element={<Donate/>}/>
-          <Route path='home' element={<Home/>}/>
-
+          <Route path='/popup' element={<Popup/>}/>
+          <Route path='/Home' element={<Home/>}/>
         </Routes>
       </Router>
     </ChakraProvider>

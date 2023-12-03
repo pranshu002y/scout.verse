@@ -1,5 +1,7 @@
 import React from "react";
-import video from "../src/remastered.mp4";
+import Upload from "./Pages/Upload";
+// import video from "../src/remastered.mp4";
+import video from "../src/biker.mp4";
 const Section = ()=>{
     return(
         <div id="page1">
@@ -9,6 +11,7 @@ const Section = ()=>{
             <div id="play">PLAY</div>
             <video autoPlay loop muted src={video}></video>
         </div>
+        {/* <Upload/> */}
     </div>
     )
 }

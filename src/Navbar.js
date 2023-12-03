@@ -3,14 +3,14 @@ import { useState } from "react";
 import Notification from "./Notification";
 import axios from 'axios';
 import { useEffect, useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 const Navbar = () => {
   const [data,setData]=useState();
   const navigate = useNavigate()
   const getUserDetails = async () => {
        
     try {
-        const res = await axios.get('http://localhost:5500/auth/me', {
+        const res = await axios.get('https://scoutverse.onrender.com/auth/me', {
             headers: {
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -56,7 +56,7 @@ console.log(data);
             <a href="#" onClick={()=>navigate("/games")}>Games</a>
             <a href="#" onClick={()=>navigate("/donate")}>Donate</a>
           </div>
-          <div id="icons"onClick={()=>{
+          <div id="icons" onClick={()=>{
                 if(showModal){
                     closeModal();
                 }else{

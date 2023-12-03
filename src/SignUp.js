@@ -20,7 +20,7 @@ function Signup() {
 
   const handleSignUp = async () => {
     try {
-      const res = await axios.post("http://localhost:5500/auth/signup", data, {
+      const res = await axios.post("https://scoutverse.onrender.com/auth/signup", data, {
         headers: { "Content-Type": "application/json" },
       });
       console.log(res);
@@ -54,7 +54,7 @@ function Signup() {
           </div>
           <div className="input-margin">
             <input
-              type="email"
+              type="text"
               className="input-email"
               id="emailInput"
               placeholder="Enter your email"
@@ -68,7 +68,7 @@ function Signup() {
           </div>
           <div className="input-margin">
             <input
-              type="password"
+              type="text"
               className="input-email"
               id="passwordInput"
               placeholder="Enter your password"

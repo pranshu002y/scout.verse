@@ -15,7 +15,7 @@ const Login = () => {
   const navigate = useNavigate()
   const handleSignIn = async()=>{
     try{
-      const res = await axios.post('http://localhost:5500/auth/login',
+      const res = await axios.post('https://scoutverse.onrender.com/auth/login',
       data,{
         headers:{"content-type":"application/json"}
       })
@@ -38,7 +38,7 @@ const Login = () => {
       <div className="SignIn1">
         <div className="RightSide"></div>
         <div className="LeftSide"></div>
-        <div className="Board">Board</div>
+        <div className="Board">SCOUT </div>
         <div className="LoginForm">
           <div className="SignIn2">
             <span className="span-1">Sign In</span>
