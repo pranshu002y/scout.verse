@@ -27,9 +27,9 @@ const Events=()=>{
 			}
 		}
 	}
-	// useEffect(()=>{
-	// 	getimage()
-	// },[]);
+	useEffect(()=>{
+		getimage()
+	},[]);
 
 	const getUserDetails = async () => {
        
@@ -139,29 +139,25 @@ const Events=()=>{
 				
 				
 
-
-{data && data.map((e, i) => (
-  <main key={i}>
-    <div className="card-2">
-	
-      <img src={e.image_url} alt="" />
-      <div className="card-content">
-	  
-        <h2>{imagedata && imagedata[i].Product}</h2>
-        <p>{imagedata && imagedata[i].Category}</p>
-		
-        <a href="#" className="button">
-          {imagedata && imagedata[i].Brand}
-          <br />
-		
-          <span className="material-symbols-outlined">
-            {imagedata && imagedata[i].Price}
-          </span>
-		
-        </a>
+				{data && data.map((e, i) => (
+  imagedata && imagedata.length > i ? (
+    <main key={i}>
+      <div className="card-2">
+        <img src={e.image_url} alt="" />
+        <div className="card-content">
+          <h2>{imagedata[i].Product}</h2>
+          <p>{imagedata[i].Category}</p>
+          <a href="#" className="button">
+            {imagedata[i].Brand}
+            <br />
+            <span className="material-symbols-outlined">
+              {imagedata[i].Price}
+            </span>
+          </a>
+        </div>
       </div>
-    </div>
-  </main>
+    </main>
+  ) : null
 ))}
 
 
