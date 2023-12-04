@@ -35,108 +35,25 @@ useEffect(() => {
   return (
     <div className="si">
       <div className="notification">
-      <div className="notification-heading">
-        <span className="notification-content">{data && data.firstname}{data && data.lastname}</span>
+      <main>
+      <div className="card-2">
+        <img src="https://res.cloudinary.com/dpiatasuq/image/upload/v1701711417/339993515_620378456147197_6430487127368903313_n_vjcp3b.jpg" alt="" />
+        <div className="card-content">
+          <h2>{data && data.firstname}{data && data.lastname}</h2>
+          <p>{data && data.email}</p>
+          <a href="#" className="button">
+            <span className="material-symbols-outlined">
+            {data && data.createdAt}
+            </span>
+          </a>
+        </div>
       </div>
+    </main>
 
-      <div className="notification-section">
-        <div className="man-logo">
-        <img src={data && data.profileLink} alt="none" />
-        </div>
-        <div className="message-section">
-          <div className="message-section-content">
-            <p>
-              <span className="section-content">New Assignment available</span>
-              <span className="subject-name">
-                “ INT407 ” : “Chapter 1 & Chapter 2”
-              </span>
-            </p>
-          </div>
-          <div className="message-section-content-2">
-            <span className="section-content-2">a few moments ago</span>
-            <span className="section-btn">New</span>
-          </div>
-        </div>
-      </div>
+    
+      
 
-      <div className="notification-section">
-        <div className="man-logo">
-        <img src={data && data.profileLink} alt="none" />
-        </div>
-        <div className="message-section">
-          <div className="message-section-content">
-            <p>
-              <span className="section-content">New Assignment available</span>
-              <span className="subject-name">
-                “ INT407 ” : “Chapter 1 & Chapter 2”
-              </span>
-            </p>
-          </div>
-          <div className="message-section-content-2">
-            <span className="section-content-2">a few moments ago</span>
-            <span className="section-btn">New</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="notification-section">
-        <div className="man-logo">
-        <img src={data && data.profileLink} alt="none" />
-        </div>
-        <div className="message-section">
-          <div className="message-section-content">
-            <p>
-              <span className="section-content">New Assignment available</span>
-              <span className="subject-name">
-                “ INT407 ” : “Chapter 1 & Chapter 2”
-              </span>
-            </p>
-          </div>
-          <div className="message-section-content-2">
-            <span className="section-content-2">a few moments ago</span>
-            <span className="section-btn">New</span>
-          </div>
-        </div>
-      </div>
-      <div className="notification-section">
-        <div className="man-logo">
-        <img src={data && data.profileLink} alt="none" />
-        </div>
-        <div className="message-section">
-          <div className="message-section-content">
-            <p>
-              <span className="section-content">New Assignment available</span>
-              <span className="subject-name">
-                “ INT407 ” : “Chapter 1 & Chapter 2”
-              </span>
-            </p>
-          </div>
-          <div className="message-section-content-2">
-            <span className="section-content-2">a few moments ago</span>
-            <span className="section-btn">New</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="notification-section">
-        <div className="man-logo">
-        <img src={data && data.profileLink} alt="none" />
-        </div>
-        <div className="message-section">
-          <div className="message-section-content">
-            <p>
-              <span className="section-content">New Assignment available</span>
-              <span className="subject-name">
-                “ INT407 ” : “Chapter 1 & Chapter 2”
-              </span>
-            </p>
-          </div>
-          <div className="message-section-content-2">
-            <span className="section-content-2">a few moments ago</span>
-            <span className="section-btn">New</span>
-          </div>
-        </div>
-      </div>
+   
       <div className="view-all">
         <div>
           {/* <img src={eye} alt="eye" /> */}
