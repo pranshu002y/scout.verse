@@ -1,6 +1,7 @@
 import React from "react";
 import video from "../src/mahira.mp4";
 import brand from "../src/brand.mp4";
+import { Link } from "react-router-dom";
 // import denim from "../src/denim.mp4";
 const Products = ()=>{
     return(
@@ -11,7 +12,7 @@ const Products = ()=>{
                 alt=""/> */}
                  <video autoPlay loop muted  src={video}></video>
             <div data-scroll data-scroll-speed="-2" className="dets">
-            <span>Mya khalifa</span>
+            <span><Link to="https://www.instagram.com/officialmahirasharma/?hl=en">Mahira Sharma</Link></span>
             </div>
 
         </div>
@@ -20,7 +21,8 @@ const Products = ()=>{
                 src="https://res.cloudinary.com/dpiatasuq/image/upload/v1699162619/WhatsApp_Image_2023-11-05_at_11.06.06_AM_prdly3.jpg"
                 alt=""/>
                 {/* <video autoPlay loop muted  src={denim}></video> */}
-            <div data-scroll data-scroll-speed="-2" className="dets"> <span>Pranshu Yadav</span></div>
+            <div data-scroll data-scroll-speed="-2" className="dets"> 
+            <span><Link to="https://www.instagram.com/pranshu_yadav15/">Pranshu Yadav</Link></span></div>
 
         </div>
         <div id="elem3" className="elem">
@@ -29,7 +31,7 @@ const Products = ()=>{
                 alt=""/> */}
                 <video autoPlay loop muted  src={brand}></video>
             <div data-scroll data-scroll-speed="-2" className="dets">
-            <span>Amelie Jenny</span>
+            <span><Link to="https://www.instagram.com/vuudhe/?hl=en">Amelie Jenny</Link></span>
             </div>
            
         </div>

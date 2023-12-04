@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 import "../Events.css";
+import Loading from "./Loading";
 const Games=()=>{
 	const navigate= useNavigate();
 	const [data,setData] = useState();
 	const [imagedata,setimagedata] = useState();
+	const [isLoader, setLoader] =useState(true);
 	const getimage = async () => {
        
 		try {
@@ -43,7 +45,7 @@ const Games=()=>{
       console.log(res)
       localStorage.setItem('userDetails', JSON.stringify(res.data))
       setimagedata(res.data)
-		
+	  setLoader(false);
 	
 		} catch (err) {
 			console.log(err)
@@ -59,7 +61,7 @@ const Games=()=>{
   console.log(data);
   console.log(imagedata); 
 
-    return(
+    return isLoader ? <Loading/>:(
         <div>
             <div className="app">
 	<header className="app-header">
