@@ -37,7 +37,7 @@ useEffect(() => {
       <div className="notification">
       <main>
       <div className="card-2">
-        <img src="https://res.cloudinary.com/dpiatasuq/image/upload/v1701711417/339993515_620378456147197_6430487127368903313_n_vjcp3b.jpg" alt="" />
+        <img src={data && data.profileLink} alt="" />
         <div className="card-content">
           <h2>{data && data.firstname}{data && data.lastname}</h2>
           <p>{data && data.email}</p>
