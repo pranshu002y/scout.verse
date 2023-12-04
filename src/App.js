@@ -4,16 +4,14 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import LocomotiveScroll from 'locomotive-scroll';
 
+// Import your components
 import Events from './Events';
 import Games from "../src/Pages/Games"
 import Donate from "../src/Pages/Donate"
 import Shop from "../src/Pages/Shop"
 import { ChakraProvider, theme } from '@chakra-ui/react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import the necessary components and specify the type of router you want to use
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home';
-// import SignIn from './Pages/SignIn';
-// import UpdateProfile from './Pages/UpdateProfile';
 import Login from './Login';
 import Signup from './SignUp';
 import Popup from './Pages/Popup';
@@ -27,8 +25,7 @@ function App() {
       smooth: true,
     });
 
-    locoScroll.on("scroll", ScrollTrigger.update);
-
+    // Update ScrollTrigger to use Locomotive Scroll
     ScrollTrigger.scrollerProxy("#main", {
       scrollTop(value) {
         return arguments.length
