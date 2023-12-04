@@ -57,7 +57,7 @@ div#wave .dot:nth-child(3) {
 }
 
 .post-pop{
-    background-image: url("https://res.cloudinary.com/dpiatasuq/image/upload/v1700757646/afc816c19424a11c6d341c698f6d2c54_rt6juj.jpg");
+    /* background-image: url("https://images.unsplash.com/photo-1608447714925-599deeb5a682?q=80&w=1772&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
