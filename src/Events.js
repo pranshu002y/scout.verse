@@ -29,7 +29,7 @@ const Events=()=>{
 	}
 	useEffect(()=>{
 		getimage()
-	},[])
+	},[]);
 
 	const getUserDetails = async () => {
        
