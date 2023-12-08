@@ -26,7 +26,9 @@ const Login = () => {
         navigate('/')
         if(res.data.token)
         localStorage.setItem("token",res.data.token)
+        
       }
+      window.location.reload();
     }
     catch (err) {
       toastIdRef.current = toast({ description: err.message, status: 'error' })

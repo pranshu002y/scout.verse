@@ -1,24 +1,12 @@
-import {
-    Button,
-    Flex,
-    FormControl,
-    Heading,
-    Stack,
-    useColorModeValue,
-    Avatar,
-    Center,
-    Text,
-    useToast
-} from '@chakra-ui/react';
+
 import axios from 'axios';
-import { useEffect, useRef, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom'
+import { useState } from 'react';
+import {  useNavigate } from 'react-router-dom'
 import Footer from '../Footer';
 import Navbar from '../Navbar';
 import Posts from '../Posts';
 import Products from '../Products';
 import Section from '../Section';
-import Productadd from './productadd';
 
 export default function Profile() {
     const [data, setData] = useState({})
