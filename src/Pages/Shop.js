@@ -36,7 +36,7 @@ const Shop = () => {
 	const getUserDetails = async () => {
        
 		try {
-			const res = await axios.get('https://scoutverse.onrender.com/auth/getproduct/product', {
+			const res = await axios.get('https://scout-verse-backend.onrender.com/auth/getproduct/product', {
 				headers: {
 					"Content-Type": "application/json",
 					Authorization: `Bearer ${localStorage.getItem("token")}`,
