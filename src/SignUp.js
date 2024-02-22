@@ -20,7 +20,7 @@ function Signup() {
 
   const handleSignUp = async () => {
     try {
-      const res = await axios.post("https://scoutverse.onrender.com/auth/signup", data, {
+      const res = await axios.post("https://scout-verse-backend.onrender.com/auth/signup", data, {
         headers: { "Content-Type": "application/json" },
       });
       console.log(res);

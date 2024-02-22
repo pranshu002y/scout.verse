@@ -11,7 +11,7 @@ const Shop = () => {
 	const getimage = async () => {
        
 		try {
-			const res = await axios.get('https://scoutverse.onrender.com/auth/getimage/image', {
+			const res = await axios.get('https://scout-verse-backend.onrender.com/auth/getimage/image', {
 				headers: {
 					"Content-Type": "application/json",
 					Authorization: `Bearer ${localStorage.getItem("token")}`,

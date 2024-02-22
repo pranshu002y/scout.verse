@@ -12,7 +12,7 @@ const Events=()=>{
 	const getimage = async () => {
        
 		try {
-			const res = await axios.get('https://scoutverse.onrender.com/auth/getimage/image', {
+			const res = await axios.get('https://scout-verse-backend.onrender.com/auth/getimage/image', {
 				headers: {
 					"Content-Type": "application/json",
 					Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -37,7 +37,7 @@ const Events=()=>{
 	const getUserDetails = async () => {
        
 		try {
-			const res = await axios.get('https://scoutverse.onrender.com/auth/getproduct/product', {
+			const res = await axios.get('https://scout-verse-backend.onrender.com/auth/getproduct/product', {
 				headers: {
 					"Content-Type": "application/json",
 					Authorization: `Bearer ${localStorage.getItem("token")}`,

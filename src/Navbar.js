@@ -10,7 +10,7 @@ const Navbar = () => {
   const getUserDetails = async () => {
        
     try {
-        const res = await axios.get('https://scoutverse.onrender.com/auth/me', {
+        const res = await axios.get('https://scout-verse-backend.onrender.com/auth/me', {
             headers: {
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${localStorage.getItem("token")}`,

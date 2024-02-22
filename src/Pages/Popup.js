@@ -19,7 +19,7 @@ const Popup = () => {
   
     const handleSignUp = async () => {
       try {
-        const res = await axios.post("https://scoutverse.onrender.com/auth/createpost/product", data, {
+        const res = await axios.post("https://scout-verse-backend.onrender.com/auth/createpost/product", data, {
           headers: { "Content-Type": "application/json" },
         });
         console.log(res);
